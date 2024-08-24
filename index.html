@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador De Textos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header" id="header">ENCRIPTADOR DE TEXTOS</header>
+    <main>
+        <div class="user" id="user">
+            <h2>Texto a Procesar</h2>
+            <textarea name="userTxt" id="userTxt" class="userTxt" placeholder="Escriba aqui su frase..." onkeypress="return ((event.charCode >= 97 && event.charCode <= 122) || event.charCode == 32 || event.charCode == 241 ||  event.charCode == 13 ||  event.charCode == 24 &&  event.charCode == 28)"
+            ></textarea>
+            <label class="labelWarning" for=""><img class="warning" src="IMG/warning-Photoroom.png" alt="">Solo letras en minusculas</label>
+            <div class="userBtn">
+                <button class="btn" id="btnEncrypt" onclick="encryptFunction();"><img class="encryptImg" src="IMG/bloquear.png" alt="Encriptar"> Encriptar</button>
+                <button class="btn" id="btnDecrypt" onclick="decryptFunction();"><img class="decryptImg" src="IMG/desbloquear.png" alt="Desencriptar"> Desencriptar</button>
+                <button class="btn" id="btnCI" onclick="initialConditionFunction();"><img class="rebootImg" src="IMG/reboot.png" alt="Reiniciar"> Reiniciar</button>
+                
+            </div>  
+        </div>
+        <img class="comprobadoImg" id="comprobadoImg" src="IMG/comprobado.png" alt="comprobado">
+        <div class="result" id="result">
+            <h2 id="titleResult">Texto Encriptado</h2>
+            <img src="IMG/candado.png" class="logo" id="logo" alt="logo encriptado">
+            <p name="resultTxt" id="resultTxt" class="resultTxt"></p>
+            <p class="resultMsj1" id="resultMsj1">Ningun texto fue encontado...</p>
+            <p class="resultMsj2" id="resultMsj2" >Ingrese el texto que desea encriptar o desencriptar</p>
+            <label class="labelResult" id="labelResult">¡El texto ha sido editado con exito!!</label>
+            <button class="btn" id="btnCopy" onclick="copyFunction();"><img class="copyImg" src="IMG/copiar.png" alt="Copiar"> Copiar</button>
+        </div>
+    </main>
+    
+    <footer class="footer" id="footer">
+        <p class="footerText">Desarrollado por Carlos Díaz</p>
+        <a href="https://github.com/" class="footerBtn"><img src="IMG/github.png" alt="github"> GitHub</a>
+        <a href="https://www.instagram.com/" class="footerBtn"><img src="IMG/instagram.png" alt="instagram"> Instagram</a>
+        <a href="https://co.linkedin.com/" class="footerBtn"><img src="IMG/instagram.png" alt=""> LinkedIn</a>
+    </footer>
+</body>
+<script src="encriptador.js"></script>
+</html>
